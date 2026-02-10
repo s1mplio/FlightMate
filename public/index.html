@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlightMate Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>FlightMate</h1>
+        <p>Scalable booking dashboard</p>
+      </div>
+      <span id="health-badge" class="badge">Checking API…</span>
+    </header>
+
+    <main>
+      <section class="panel controls">
+        <h2>Find flights</h2>
+        <div class="controls-row">
+          <input id="query" type="search" placeholder="Search by route, date or flight ID" />
+          <button id="search-btn">Search</button>
+        </div>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="panel metric">
+          <h3>Total flights</h3>
+          <p id="total-flights">-</p>
+        </article>
+        <article class="panel metric">
+          <h3>Active query</h3>
+          <p id="active-query">All</p>
+        </article>
+        <article class="panel metric">
+          <h3>Cached records</h3>
+          <p id="cached-records">0</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="section-header">
+          <h2>Available flights</h2>
+          <small id="pagination-meta"></small>
+        </div>
+        <div id="flights" class="flight-grid"></div>
+      </section>
+    </main>
+
+    <template id="flight-card-template">
+      <article class="flight-card">
+        <div>
+          <h3 class="flight-route"></h3>
+          <p class="flight-meta"></p>
+        </div>
+        <div class="flight-side">
+          <strong class="flight-price"></strong>
+          <button class="book-btn">Quick book</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
