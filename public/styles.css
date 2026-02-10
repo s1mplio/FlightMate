@@ -1,0 +1,156 @@
+:root {
+  color-scheme: dark;
+  --bg: #080d19;
+  --panel: #121a2e;
+  --accent: #6ea8fe;
+  --accent-2: #7ef7d2;
+  --text: #e6ecff;
+  --muted: #95a3c7;
+  --danger: #ff7d7d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top, #1b2b57, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.topbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.topbar p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.panel {
+  background: color-mix(in hsl, var(--panel), transparent 5%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.controls-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+input,
+button {
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.7rem 0.85rem;
+  color: var(--text);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  background: linear-gradient(120deg, var(--accent), var(--accent-2));
+  color: #071129;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.metric h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.metric p {
+  margin: 0.35rem 0 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--muted);
+}
+
+.flight-grid {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.flight-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.75rem;
+}
+
+.flight-route {
+  margin: 0;
+}
+
+.flight-meta {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+}
+
+.flight-side {
+  text-align: right;
+}
+
+.flight-price {
+  color: var(--accent-2);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.book-btn {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
